@@ -44,7 +44,7 @@ const Signup: React.FC = () => {
     return (
         <div className="min-h-screen bg-gradient-to-r from-blue-200 to-gray-200 flex items-center justify-center p-4">
             <div
-                className="flex flex-col md:flex-row w-full max-w-6xl bg-white/30 backdrop-blur-md backdrop-saturate-150 border border-white/20 rounded-3xl shadow-lg overflow-hidden">
+                className="flex flex-col md:flex-row w-full md:w-[1200px] md:h-[600px] max-w-6xl bg-white/30 backdrop-blur-md backdrop-saturate-150 border border-white/20 rounded-3xl shadow-lg overflow-hidden">
                 <div
                     className="w-full md:w-1/2 h-96 md:h-auto bg-cover bg-center relative"
                     style={{backgroundImage: `url(${backgroundImage})`}}
