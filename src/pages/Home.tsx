@@ -27,11 +27,11 @@ export function Home() {
                 <div className="relative overflow-hidden">
                     <div className="absolute inset-0">
                         <img
-                            src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80"
+                            src="src/assets/images/bg-home.jpg"
                             alt="Pet Food Store"
                             className="w-full h-full object-cover"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-r from-gray-900/80 to-gray-900/50"/>
+                        <div className="absolute inset-0 bg-gradient-to-r from-gray-900/70 to-gray-900/50"/>
                     </div>
 
                     <div className="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
