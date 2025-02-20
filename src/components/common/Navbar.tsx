@@ -13,7 +13,7 @@ interface ButtonProps {
 
 interface HeaderProps {
     navigationItems: NavigationItem[];
-    logoText: string;
+    logoText?: string;
     className?: string;
     bgColor?: string;
     textColor?: string;
@@ -22,7 +22,7 @@ interface HeaderProps {
 
 const Navbar = ({
                     navigationItems,
-                    logoText,
+                    logoText = "Pet Food Store",
                     className = "",
                     bgColor = "bg-white",
                     textColor = "text-gray-700",
@@ -31,32 +31,35 @@ const Navbar = ({
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     return (
-        <nav className={`${bgColor} ${className} ml-2 mr-2 rounded-xl shadow-md`}>
+        <nav className={`${bgColor} ${className} drop-shadow-sm`}>
             <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex items-center justify-between h-16 cursor-pointer">
-                    {/* Logo */}
+                <div className="flex items-center justify-between h-16">
+
+                    {/* Logo (Left) */}
                     <div className="flex-shrink-0">
                         <span className={`${textColor} text-xl font-bold`}>{logoText}</span>
                     </div>
 
-                    {/* Desktop Navigation */}
-                    <div className="hidden md:flex items-center space-x-4">
+                    {/* Navigation Items (Right) */}
+                    <div className="hidden md:flex flex-1 justify-end space-x-6">
                         {navigationItems.map((item) => (
                             <a
                                 key={item.name}
                                 href={item.href}
-                                className={`${textColor} hover:bg-gray-100 px-3 py-2 rounded-xl text-sm font-semibold transition-colors`}
+                                className={`${textColor} hover:bg-gray-100 w-28 px-3 py-2 rounded-3xl text-sm font-semibold transition-colors flex items-center justify-center`}
                             >
                                 {item.name}
                             </a>
                         ))}
+                    </div>
 
-                        {/* Buttons */}
+                    {/* Buttons (Far Right) */}
+                    <div className="hidden md:flex items-center space-x-4 ml-6">
                         {buttons.map((button, index) => (
                             <button
                                 key={index}
                                 onClick={button.onClick}
-                                className={button.className || "w-28 bg-blue-500 hover:bg-blue-100 text-white px-4 py-2 rounded-md"}
+                                className={button.className || "w-32 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md"}
                             >
                                 {button.text}
                             </button>
@@ -79,7 +82,8 @@ const Navbar = ({
                                 viewBox="0 0 24 24"
                                 stroke="currentColor"
                             >
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                                      d="M4 6h16M4 12h16M4 18h16"/>
                             </svg>
                             <svg
                                 className={`h-6 w-6 ${isMobileMenuOpen ? "block" : "hidden"}`}
@@ -87,7 +91,8 @@ const Navbar = ({
                                 viewBox="0 0 24 24"
                                 stroke="currentColor"
                             >
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                                      d="M6 18L18 6M6 6l12 12"/>
                             </svg>
                         </button>
                     </div>
