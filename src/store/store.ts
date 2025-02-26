@@ -1,11 +1,13 @@
 import {configureStore} from '@reduxjs/toolkit';
-import authSlice from "../reducers/AuthReducer.ts";
-import dogFoodSlice from "../reducers/DogFoodReducer.ts";
+import authReducer from "../reducers/AuthReducer.ts";
+import dogFoodReducer from "../reducers/DogFoodReducer.ts";
+import catFoodReducer from "../reducers/CatFoodReducer.ts";
 
 export const store = configureStore({
     reducer: {
-        auth: authSlice,
-        dogFood: dogFoodSlice
+        auth: authReducer,
+        dogFood: dogFoodReducer,
+        catFood: catFoodReducer,
     },
 })
 

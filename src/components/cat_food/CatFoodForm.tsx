@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { AppDispatch } from "../../store/store.ts";
-import { saveDogFood, updateDogFood } from "../../reducers/DogFoodReducer.ts";
-import { DogFood } from "../../models/DogFood.ts";
+import {CatFood} from "../../models/CatFood.ts";
+import {saveCatFood, updateCatFood} from "../../reducers/CatFoodReducer.ts";
 
-interface DogFoodFormProps {
-    dogFood: DogFood | null;
+interface CatFoodFormProps {
+    catFood: CatFood | null;
     isViewMode: boolean;
     onClose: () => void;
 }
 
-export function DogFoodForm({ dogFood, isViewMode, onClose }: DogFoodFormProps) {
+export function CatFoodForm({ catFood, isViewMode, onClose }: CatFoodFormProps) {
     const dispatch = useDispatch<AppDispatch>();
     const [id, setId] = useState(0);
     const [name, setName] = useState("");
@@ -21,15 +21,15 @@ export function DogFoodForm({ dogFood, isViewMode, onClose }: DogFoodFormProps) 
     const [imagePreview, setImagePreview] = useState<string | null>(null);
 
     useEffect(() => {
-        if (dogFood) {
-            setId(dogFood.id);
-            setName(dogFood.name);
-            setDescription(dogFood.description);
-            setPrice(dogFood.price);
-            setStock(dogFood.stock);
-            setImagePreview(dogFood.imagePath || null);
+        if (catFood) {
+            setId(catFood.id);
+            setName(catFood.name);
+            setDescription(catFood.description);
+            setPrice(catFood.price);
+            setStock(catFood.stock);
+            setImagePreview(catFood.imagePath || null);
         }
-    }, [dogFood]);
+    }, [catFood]);
 
     const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const file = e.target.files?.[0];
@@ -63,11 +63,11 @@ export function DogFoodForm({ dogFood, isViewMode, onClose }: DogFoodFormProps) 
             formData.append("image", image);
         }
 
-        if (dogFood) {
+        if (catFood) {
             formData.append("id", id.toString());
-            dispatch(updateDogFood(formData));
+            dispatch(updateCatFood(formData));
         } else {
-            dispatch(saveDogFood(formData));
+            dispatch(saveCatFood(formData));
         }
         onClose();
     };
@@ -80,7 +80,7 @@ export function DogFoodForm({ dogFood, isViewMode, onClose }: DogFoodFormProps) 
             <div className="bg-white rounded-lg shadow-lg w-3/4 max-w-4xl">
                 <div className="bg-gray-900 text-white rounded-t-lg p-4 flex justify-between items-center">
                     <h2 className="font-bold text-2xl">
-                        {isViewMode ? "View Dog Food" : dogFood ? "Update Dog Food" : "Add New Dog Food"}
+                        {isViewMode ? "View Cat Food" : catFood ? "Update Cat Food" : "Add New Cat Food"}
                     </h2>
                     <button
                         className="px-6 py-2 text-white rounded"
@@ -93,11 +93,11 @@ export function DogFoodForm({ dogFood, isViewMode, onClose }: DogFoodFormProps) 
                 <form onSubmit={handleSubmit} className="p-6 space-y-4">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                         <div>
-                            <label className="block font-semibold text-primary">Dog Food Name</label>
+                            <label className="block font-semibold text-primary">Cat Food Name</label>
                             <input
                                 className="w-full p-2 border border-accent rounded"
                                 type="text"
-                                placeholder="e.g. Chicken Bites"
+                                placeholder="e.g. Salmon Treats"
                                 value={name}
                                 onChange={(e) => setName(e.target.value)}
                                 required
@@ -105,11 +105,11 @@ export function DogFoodForm({ dogFood, isViewMode, onClose }: DogFoodFormProps) 
                             />
                         </div>
                         <div>
-                            <label className="block font-semibold text-primary">Dog Food Description</label>
+                            <label className="block font-semibold text-primary">Cat Food Description</label>
                             <input
                                 className="w-full p-2 border border-accent rounded"
                                 type="text"
-                                placeholder="e.g. High-protein chicken bites"
+                                placeholder="e.g. Omega-rich salmon treats"
                                 value={description}
                                 onChange={(e) => setDescription(e.target.value)}
                                 required
@@ -141,7 +141,7 @@ export function DogFoodForm({ dogFood, isViewMode, onClose }: DogFoodFormProps) 
                             />
                         </div>
                         <div>
-                            <label className="block font-semibold text-primary">Dog Food Image</label>
+                            <label className="block font-semibold text-primary">Cat Food Image</label>
                             {!isViewMode && (
                                 <input
                                     className="w-full p-2 border border-accent rounded"
@@ -174,7 +174,7 @@ export function DogFoodForm({ dogFood, isViewMode, onClose }: DogFoodFormProps) 
                                     className="px-6 py-2 w-32 bg-blue-600 text-white rounded hover:bg-blue-700"
                                     type="submit"
                                 >
-                                    {dogFood ? "Update" : "Save"}
+                                    {catFood ? "Update" : "Save"}
                                 </button>
                             </>
                         )}
