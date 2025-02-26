@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Navbar from "../../components/common/Navbar.tsx";
-import { Footer } from "../../components/common/Footer.tsx";
+import Navbar from "../components/common/Navbar.tsx";
+import { Footer } from "../components/common/Footer.tsx";
 import { useNavigate } from "react-router-dom";
 import { Mail, Phone, MapPin, Loader, Package, PhoneCall, ShieldCheck, Users } from "lucide-react";
 

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "../../store/store.ts";
 import { Link, useNavigate } from "react-router-dom";
-import { login, resetState } from "../../reducers/authSlice.ts";
+import { login, resetState } from "../../reducers/AuthReducer.ts";
 import { Eye, EyeOff } from "react-feather";
 import Navbar from "../../components/common/Navbar.tsx";
 import { Footer } from "../../components/common/Footer.tsx";

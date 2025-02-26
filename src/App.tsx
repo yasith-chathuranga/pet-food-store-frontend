@@ -1,10 +1,10 @@
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import Signup from "./pages/auth/Signup.tsx";
 import Login from "./pages/auth/Login.tsx";
-import {AdminDashboard} from "./pages/admin/AdminDashboard.tsx";
-import {UserDashboard} from "./pages/user/UserDashboard.tsx";
+import {DogFoodStore} from "./pages/admin/DogFoodStore.tsx";
+import {DogFoodUser} from "./pages/user/DogFoodUser.tsx";
 import {Home} from "./pages/Home.tsx";
-import {About} from "./pages/user/About.tsx";
+import {About} from "./pages/About.tsx";
 
 function App() {
   const routes = createBrowserRouter([
@@ -14,8 +14,8 @@ function App() {
     },
     {path: '/signup', element: <Signup/>},
     {path: '/login', element: <Login/>},
-    {path: '/admin', element: <AdminDashboard/>},
-    {path: '/user', element: <UserDashboard/>},
+    {path: '/admin/dog-food', element: <DogFoodStore/>},
+    {path: '/user/dog-food', element: <DogFoodUser/>},
     {path: '/about', element: <About/>}
   ])
 

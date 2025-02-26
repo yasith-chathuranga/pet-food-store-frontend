@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "../../store/store.ts";
-import { resetState, signup } from "../../reducers/authSlice.ts";
+import { resetState, signup } from "../../reducers/AuthReducer.ts";
 import { Link, useNavigate } from "react-router-dom";
 import backgroundImage from "../../assets/images/bg-signup.jpg";
 import { Eye, EyeOff } from 'react-feather';
