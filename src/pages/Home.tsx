@@ -31,7 +31,7 @@ export function Home() {
                             alt="Pet Food Store"
                             className="w-full h-full object-cover"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-r from-gray-900/70 to-gray-900/50"/>
+                        <div className="absolute inset-0 bg-gradient-to-r from-gray-900/80 to-gray-900/60"/>
                     </div>
 
                     <div className="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">

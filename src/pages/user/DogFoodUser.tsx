@@ -88,7 +88,6 @@ export const DogFoodUser = () => {
                         { name: "Dog Food", href: "/user/dog-food" },
                         { name: "Cat Food", href: "/user/cat-food" },
                     ]}
-                    logoText={"Logo"}
                     buttons={[
                         { text: "Log Out", onClick: handleLogout },
                     ]}

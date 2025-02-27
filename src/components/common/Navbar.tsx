@@ -22,7 +22,7 @@ interface HeaderProps {
 
 const Navbar = ({
                     navigationItems,
-                    logoText = "Pet Food Store",
+                    logoText = "CrunchyPaws",
                     className = "",
                     bgColor = "bg-white",
                     textColor = "text-gray-700",
@@ -37,7 +37,7 @@ const Navbar = ({
 
                     {/* Logo (Left) */}
                     <div className="flex-shrink-0">
-                        <span className={`${textColor} text-xl font-bold`}>{logoText}</span>
+                        <span className={`${textColor} text-2xl font-serif font-bold`}>{logoText}</span>
                     </div>
 
                     {/* Navigation Items (Right) */}

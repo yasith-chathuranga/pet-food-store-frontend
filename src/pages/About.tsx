@@ -36,7 +36,7 @@ export function About() {
                 <div className="container mx-auto text-center">
                     <h2 className="text-3xl font-semibold text-gray-800">About</h2>
                     <p className="text-gray-600 mt-4">
-                        Welcome to Pet Food Store, your trusted destination for high-quality pet nutrition.
+                        Welcome to CrunchyPaws, your trusted destination for high-quality pet nutrition.
                         We are dedicated to providing premium pet food that meets the nutritional needs of your furry friends.
                         Our mission is to ensure that every pet gets the best care through wholesome, healthy, and delicious food.
                     </p>
@@ -102,7 +102,7 @@ export function About() {
                             <div className="space-y-4">
                                 <div className="flex items-center space-x-3">
                                     <Mail className="text-blue-700" size={20}/>
-                                    <span className="text-gray-700">petstore@gmail.com</span>
+                                    <span className="text-gray-700">crunchypaws@gmail.com</span>
                                 </div>
                                 <div className="flex items-center space-x-3">
                                     <Phone className="text-blue-700" size={20}/>
@@ -110,7 +110,7 @@ export function About() {
                                 </div>
                                 <div className="flex items-center space-x-3">
                                     <MapPin className="text-blue-700" size={20}/>
-                                    <span className="text-gray-700">123 Thawalama Road, Galle, Sri Lanka</span>
+                                    <span className="text-gray-700">123 Colombo Road, Galle, Sri Lanka</span>
                                 </div>
                             </div>
                         </div>

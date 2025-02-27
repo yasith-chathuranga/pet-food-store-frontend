@@ -105,7 +105,6 @@ export const DogFoodStore = () => {
                         { name: "Dog Food", href: "/admin/dog-food" },
                         { name: "Cat Food", href: "/admin/cat-food" },
                     ]}
-                    logoText={"Logo"}
                     buttons={[
                         { text: "Log Out", onClick: handleLogout },
                     ]}

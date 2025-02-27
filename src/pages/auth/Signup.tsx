@@ -5,8 +5,6 @@ import { resetState, signup } from "../../reducers/AuthReducer.ts";
 import { Link, useNavigate } from "react-router-dom";
 import backgroundImage from "../../assets/images/bg-signup.jpg";
 import { Eye, EyeOff } from 'react-feather';
-import Navbar from "../../components/common/Navbar.tsx";
-import {Footer} from "../../components/common/Footer.tsx";
 
 const Signup: React.FC = () => {
     const dispatch = useDispatch<AppDispatch>();
@@ -45,16 +43,7 @@ const Signup: React.FC = () => {
 
     return (
         <div>
-            <Navbar navigationItems={[
-                {name: "Home", href: "/"},
-                {name: "About Us", href: "/about"},
-            ]}
-                    buttons={[
-                        {text: "Get Started", onClick: () => navigate("/signup"), className: "w-32 hover:bg-gray-100 text-black border border-blue-600 px-4 py-2 rounded-md"},
-                        {text: "Log In", onClick: () => navigate("/login")},
-                    ]}
-            />
-            <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
+            <div className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-r from-orange-300 to-gray-100">
                 <div
                     className="flex flex-col md:flex-row w-full md:w-[1200px] md:h-[600px] max-w-6xl bg-white/30 backdrop-blur-md backdrop-saturate-150 border border-white/20 rounded-3xl shadow-lg overflow-hidden">
                     <div
@@ -69,6 +58,7 @@ const Signup: React.FC = () => {
                             </h3>
 
                             {error && <p className="text-red-500 text-center mb-4">{error}</p>}
+
                             <form onSubmit={handleSubmit} className="space-y-6">
                                 <div className="relative">
                                     <input
@@ -89,7 +79,6 @@ const Signup: React.FC = () => {
                                         Username
                                     </label>
                                 </div>
-
                                 <div className="relative">
                                     <input
                                         id="email"
@@ -135,7 +124,6 @@ const Signup: React.FC = () => {
                                         {showPassword ? <EyeOff size={20}/> : <Eye size={20}/>}
                                     </button>
                                 </div>
-
                                 <div className="relative">
                                     <input
                                         id="confirmPassword"
@@ -162,7 +150,6 @@ const Signup: React.FC = () => {
                                         {showConfirmPassword ? <EyeOff size={20}/> : <Eye size={20}/>}
                                     </button>
                                 </div>
-
                                 <button
                                     type="submit"
                                     disabled={loading}
@@ -185,7 +172,6 @@ const Signup: React.FC = () => {
                     </div>
                 </div>
             </div>
-            <Footer/>
         </div>
     );
 };

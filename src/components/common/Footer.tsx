@@ -68,7 +68,7 @@ export function Footer() {
                 {/* Divider */}
                 <div className="border-t border-gray-800 mt-8 pt-8 text-center">
                     <p className="text-sm text-gray-400">
-                        &copy; {new Date().getFullYear()} Pet Food Store. All rights reserved.
+                        &copy; {new Date().getFullYear()} CrunchyPaws. All rights reserved.
                     </p>
                 </div>
             </div>
