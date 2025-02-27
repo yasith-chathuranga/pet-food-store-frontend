@@ -1,50 +1,76 @@
-# React + TypeScript + Vite
+<div align="center">
+  <img src="src/assets/images/paw-logo.svg" alt="Crunchy Paws Logo" width="130" style="margin-top: 50px" />
+<h2>Pet-Food-Store-Frontend</h2>
+</div>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Introduction
+The **CrunchyPaws** frontend is built using **React, TypeScript, Redux, Redux Thunk, and Tailwind CSS** to provide a seamless and user-friendly interface for managing pet food products. This application allows users to explore a variety of **high-quality cat and dog food** while ensuring a smooth and interactive browsing experience. The frontend interacts with the backend API for authentication, user roles, and product management.
 
-Currently, two official plugins are available:
+This platform prioritizes **ease of use, efficiency, and responsiveness**, making **CrunchyPaws** a reliable pet food store for pet owners and administrators alike.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+#### User Interface
 
-## Expanding the ESLint configuration
+<div>
+  <img src="src/assets/collage-ui.jpg" alt="collage-ui" width="auto" height="auto">
+</div>
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Technologies Used
+- **React**
+- **TypeScript**
+- **Redux**
+- **Redux Thunk**
+- **Tailwind CSS**
+- **Vite**
 
-- Configure the top-level `parserOptions` property like this:
+## Features
+- **Admin Features:** Add, update, and delete cat and dog food items.
+- **User Access:** View available pet food products without modification privileges.
+- **Authentication:** Secure login with JWT and refresh tokens.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Backend Repository Link
+[CrunchyPaws Backend Repository](https://github.com/yasith-chathuranga/pet-food-store-backend.git)
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## License
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Getting Started
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+### Prerequisites
+To run this project, ensure you have the following installed:
+- **Node.js**
+- **TypeScript**
+- **Vite**
+- **React**
+- **An IDE (Integrated Development Environment)**
+
+### Running the Application
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/yasith-chathuranga/pet-food-store-frontend.git
+   cd pet-food-store-frontend
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Start the application:**
+   ```bash
+   npm run dev
+   ```
+
+<div align="center">
+<a href="https://react.dev/" target="_blank"><img src="https://img.shields.io/badge/React-100000?style=for-the-badge&logo=react&logoColor=white" alt="React Badge" /></a>
+<a href="https://www.typescriptlang.org/" target="_blank"><img src="https://img.shields.io/badge/TypeScript-100000?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript Badge" /></a>
+<a href="https://redux.js.org/" target="_blank"><img src="https://img.shields.io/badge/Redux-100000?style=for-the-badge&logo=redux&logoColor=white" alt="Redux Badge" /></a>
+<a href="https://tailwindcss.com/" target="_blank"><img src="https://img.shields.io/badge/Tailwind-100000?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind Badge" /></a>
+<a href="https://vitejs.dev/" target="_blank"><img src="https://img.shields.io/badge/Vite-100000?style=for-the-badge&logo=vite&logoColor=white" alt="Vite Badge" /></a>
+<a href="https://github.com/yasith-chathuranga" target="_blank"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a>
+<a href="https://git-scm.com/" target="_blank"><img src="https://img.shields.io/badge/Git-100000?style=for-the-badge&logo=git&logoColor=white"></a>
+</div>
+
+<br>
+<p align="center">
+  &copy; 2025 Yasith Chathuranga
+</p>
